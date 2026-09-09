@@ -29,7 +29,7 @@
         <p class="eyebrow">ROBOT LEARNING · EMBODIED AI · SYSTEMS</p>
         <h1 id="hero-title">黄琪霖</h1>
         <p class="hero-role">机器人学习 / 具身智能工程方向</p>
-        <p class="hero-intro">关注 VLA 策略、机器人操作与推理部署，持续构建从数据采集、策略训练到真机执行的完整工程链路。</p>
+        <p class="hero-intro">面向真实机器人构建从双臂接入、数据采集、策略复现到常驻服务与真机部署的完整工程链路。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#projects">查看项目 <span aria-hidden="true">↓</span></a>
           <a class="button button-secondary" href="https://github.com/HuangKylin" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
@@ -55,8 +55,8 @@
       <div class="container compact-layout">
         <div class="compact-heading"><p class="eyebrow">01 / EDUCATION</p><h2 id="education-title">教育经历</h2></div>
         <div class="compact-rows">
-          <div class="compact-row"><span>2021 — 2025</span><strong>东华大学</strong><b>本科</b></div>
-          <div class="compact-row"><span>2025 — 至今</span><strong>东华大学</strong><b>硕士</b></div>
+          <div class="compact-row"><span>2021 — 2025</span><strong>东华大学（双一流 211）</strong><b>本科</b></div>
+          <div class="compact-row"><span>2025 — 至今</span><strong>东华大学（双一流 211）</strong><b>硕士</b></div>
         </div>
       </div>
     </section>
@@ -65,7 +65,7 @@
       <div class="container compact-layout">
         <div class="compact-heading"><p class="eyebrow">02 / INTERNSHIP</p><h2 id="internship-title">实习经历</h2></div>
         <div class="compact-rows">
-          <div class="compact-row"><span>2025.06 — 09</span><strong>索塔无界</strong><b>实习经历</b></div>
+          <div class="compact-row"><span>2025.06 — 09</span><strong>上海索塔无界科技有限公司</strong><b>实习经历</b></div>
         </div>
       </div>
     </section>
@@ -76,116 +76,127 @@
         <p class="section-note">围绕真实机器人项目形成的训练、部署与验证能力。</p>
       </div>
       <div class="skill-grid">
-        <article class="skill-card"><span>01</span><h3>机器人系统</h3><p>PiperX 双臂、三路相机、ROS 2 bridge、动作限位、状态反馈与安全发布。</p></article>
-        <article class="skill-card"><span>02</span><h3>策略训练</h3><p>LeRobot Dataset、PI0.5、PI05-Mem、Flow Matching、Processor 与 Checkpoint 管理。</p></article>
-        <article class="skill-card"><span>03</span><h3>推理部署</h3><p>异步 RTC、Action Chunk、Unix Socket 常驻服务、TensorRT 与性能指标分析。</p></article>
-        <article class="skill-card"><span>04</span><h3>开发工具</h3><p>Python、PyTorch、Linux、Git、Docker、RealSense，以及 C++ 接口协作。</p></article>
+        <article class="skill-card"><span>01</span><h3>机器人接入</h3><p>PiperX 双臂、CAN、ROS 2 bridge、三路相机、动作限位与安全发布。</p></article>
+        <article class="skill-card"><span>02</span><h3>数据与训练</h3><p>遥操数采、LeRobot Dataset、数据校验合并、Processor 与 Checkpoint 管理。</p></article>
+        <article class="skill-card"><span>03</span><h3>策略工程</h3><p>PI0.5、PI05-Mem、FlashVLA、XVLA、RTC 与异步 Action Chunk。</p></article>
+        <article class="skill-card"><span>04</span><h3>服务与部署</h3><p>Server-Client、Unix Socket、TensorRT、数值验证与运行指标监控。</p></article>
       </div>
     </section>
 
     <section id="projects" class="section container" aria-labelledby="projects-title">
       <div class="section-heading projects-heading">
         <div><p class="eyebrow">04 / SELECTED PROJECTS</p><h2 id="projects-title">项目经历</h2></div>
-        <p class="section-note">分为系统工程项目与真机任务 Demo。</p>
+        <p class="section-note">围绕一套真实机器人系统，展开接入、数据、策略与部署工作。</p>
       </div>
 
-      <div class="project-group-heading"><h3>系统工程项目</h3><span>训练 · 推理 · 部署</span></div>
+      <div class="project-group-heading"><h3>系统工程项目</h3><span>硬件接入 · 数据 · 策略 · 部署</span></div>
 
       <div class="project-list">
-        <article class="project-showcase">
+        <article class="project-showcase flagship-project">
+          <div class="project-content">
+            <div class="project-meta"><span>机器人平台 / 全链路工程</span><span>01</span></div>
+            <h3>PiperX × LeRobot 全链路平台</h3>
+            <p class="project-subtitle">把双臂机械臂接入 LeRobot，并打通从数据采集到真机执行的工程闭环</p>
+            <p>基于 LeRobot 0.6.1 适配 AgileX PiperX 双臂，围绕三路相机、14 维 state/action 接口和真实任务，搭建可重复使用的机器人学习基础设施。</p>
+            <div class="engineering-grid">
+              <div class="engineering-cell"><span>01 / HARDWARE</span><h4>双臂接入</h4><p>完成 CAN、ROS 2 driver 与 LeRobot bridge 的链路适配，区分只读观测和动作发布模式。</p></div>
+              <div class="engineering-cell"><span>02 / DATA</span><h4>数采平台</h4><p>接入 Pika 遥操与多路相机，固定 observation/action 契约，支持数据检查、修复和合并。</p></div>
+              <div class="engineering-cell"><span>03 / POLICY</span><h4>策略复现</h4><p>围绕 PI0.5、PI05-Mem、FlashVLA 与 XVLA 完成策略接口、processor 和 checkpoint 适配。</p></div>
+              <div class="engineering-cell"><span>04 / RUNTIME</span><h4>真机运行</h4><p>将模型服务、动作队列、状态反馈和安全验收拆开，支持常驻服务与重复启动客户端。</p></div>
+            </div>
+            <div class="project-details">
+              <div><span>我的工作</span><strong>硬件接入、数据管线、策略适配与部署</strong></div>
+              <div><span>工程结果</span><strong>形成可复用的 PiperX 真机实验基线</strong></div>
+            </div>
+            <div class="tag-list"><span>PiperX</span><span>LeRobot 0.6.1</span><span>ROS 2</span><span>Dataset</span><span>VLA</span></div>
+          </div>
           <div class="video-column">
-            <!-- 添加视频后，可将下方占位块替换为：
-            <video class="project-video" controls preload="metadata" poster="./images/projects/piperx-lerobot/cover.webp">
-              <source src="./videos/piperx-lerobot/demo.mp4" type="video/mp4">
-            </video>
-            -->
-            <div class="video-placeholder" role="img" aria-label="PiperX-LeRobot 演示视频待添加">
+            <!-- 视频准备好后，将占位块替换为 video 标签。 -->
+            <div class="video-placeholder" role="img" aria-label="PiperX-LeRobot 全链路平台演示视频待添加">
               <span class="play-icon" aria-hidden="true">▶</span>
               <strong>演示视频待添加</strong>
-              <code>videos/piperx-lerobot/demo.mp4</code>
+              <code>videos/piperx-lerobot/platform.mp4</code>
             </div>
-            <div class="video-caption"><span>REAL ROBOT DEMO</span><span>PROJECT 01</span></div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta"><span>具身智能 / 系统部署</span><span>2026</span></div>
-            <h3>PiperX-LeRobot</h3>
-            <p class="project-subtitle">双臂机械臂 VLA 训练、异步推理与 TensorRT 部署系统</p>
-            <p>基于 LeRobot 0.6.1 打通 AgileX PiperX 双臂的三路相机数据采集、14 维 state/action 接口、策略训练、RTC 推理和真机部署。</p>
-            <ul class="project-points">
-              <li>复用 LeRobot 原生 PI0.5 RTC，通过 action chunk 和 blending 降低同步推理停顿。</li>
-              <li>解耦 GPU server 与 Piper client，建立任务、版本和动作契约校验。</li>
-              <li>构建 TensorRT 实验后端，并验证 checkpoint、processor 和推理数值。</li>
-            </ul>
-            <div class="project-details">
-              <div><span>我的工作</span><strong>训练、推理与部署链路</strong></div>
-              <div><span>当前状态</span><strong>持续完善</strong></div>
-            </div>
-            <div class="tag-list"><span>LeRobot</span><span>PI0.5</span><span>RTC</span><span>TensorRT</span><span>ROS 2</span></div>
+            <div class="video-caption"><span>PLATFORM OVERVIEW</span><span>VIDEO 01</span></div>
           </div>
         </article>
 
         <article class="project-showcase">
-          <div class="video-column">
-            <!-- 视频目标路径：./videos/pi05-mem/demo.mp4 -->
-            <div class="video-placeholder video-placeholder-light" role="img" aria-label="PI05-Mem 演示视频待添加">
-              <span class="play-icon" aria-hidden="true">▶</span>
-              <strong>演示视频待添加</strong>
-              <code>videos/pi05-mem/demo.mp4</code>
-            </div>
-            <div class="video-caption"><span>POLICY DEMO</span><span>PROJECT 02</span></div>
-          </div>
           <div class="project-content">
-            <div class="project-meta"><span>策略迁移 / 训练工程</span><span>2026</span></div>
-            <h3>PI05-Mem LeRobot 插件</h3>
-            <p class="project-subtitle">面向多帧视觉历史的第三方 LeRobot Policy</p>
-            <p>将 OpenTau PI05-Mem 迁移为独立的 LeRobot 第三方策略插件，兼顾原模型语义与标准训练接口。</p>
+            <div class="project-meta"><span>策略接入 / 异步执行</span><span>02</span></div>
+            <h3>Policy 复现与异步推理</h3>
+            <p class="project-subtitle">把不同策略接入同一套 LeRobot/PiperX 真机接口</p>
+            <p>针对不同模型的输入历史、动作语义和推理节奏，分别完成适配与验证，并将同步推理改造成后台生成、前台消费的动作执行流水线。</p>
+            <div class="policy-matrix" role="region" aria-label="策略接入矩阵" tabindex="0">
+              <table class="policy-table">
+                <thead><tr><th>策略</th><th>主要工作</th><th>展示重点</th></tr></thead>
+                <tbody>
+                  <tr><th>PI0.5</th><td>原生训练、RTC 推理与真机执行</td><td>基线链路</td></tr>
+                  <tr><th>PI05-Mem</th><td>多帧视觉历史与第三方 Policy 插件</td><td>接口迁移</td></tr>
+                  <tr><th>FlashVLA</th><td>LeRobot/PiperX 适配与独立推理桥</td><td>策略复现</td></tr>
+                  <tr><th>XVLA</th><td>异步 Chunk、队列和动作融合</td><td>执行优化</td></tr>
+                </tbody>
+              </table>
+            </div>
             <ul class="project-points">
-              <li>保留三相机、四帧视觉历史与原始 processor 输入契约。</li>
-              <li>完成 checkpoint 严格转换、训练恢复与数值等价验证。</li>
-              <li>隔离第三方 policy 代码，减少对 LeRobot 主仓库的侵入。</li>
+              <li>实现 inference worker、有限 action queue 与动作发布线程，减少 chunk 交界处的等待。</li>
+              <li>记录队列水位、推理延迟和控制周期，为真机调试提供可追踪指标。</li>
             </ul>
             <div class="project-details">
-              <div><span>我的工作</span><strong>策略迁移与接口验证</strong></div>
-              <div><span>当前状态</span><strong>工程实践</strong></div>
+              <div><span>我的工作</span><strong>Policy 适配、异步执行与验证</strong></div>
+              <div><span>当前状态</span><strong>持续扩展策略覆盖</strong></div>
             </div>
-            <div class="tag-list"><span>PyTorch</span><span>LeRobot</span><span>Flow Matching</span><span>Multi-frame</span></div>
+            <div class="tag-list"><span>PI0.5</span><span>PI05-Mem</span><span>FlashVLA</span><span>XVLA</span><span>Action Queue</span></div>
+          </div>
+          <div class="video-column">
+            <div class="video-placeholder video-placeholder-light" role="img" aria-label="Policy 复现与异步推理演示视频待添加">
+              <span class="play-icon" aria-hidden="true">▶</span>
+              <strong>演示视频待添加</strong>
+              <code>videos/policy-async/overview.mp4</code>
+            </div>
+            <div class="video-caption"><span>POLICY PIPELINE</span><span>VIDEO 02</span></div>
           </div>
         </article>
 
         <article class="project-showcase">
-          <div class="video-column">
-            <!-- 视频目标路径：./videos/xvla-flashvla/demo.mp4 -->
-            <div class="video-placeholder" role="img" aria-label="XVLA 与 FlashVLA 演示视频待添加">
-              <span class="play-icon" aria-hidden="true">▶</span>
-              <strong>演示视频待添加</strong>
-              <code>videos/xvla-flashvla/demo.mp4</code>
-            </div>
-            <div class="video-caption"><span>ASYNC EXECUTION</span><span>PROJECT 03</span></div>
-          </div>
           <div class="project-content">
-            <div class="project-meta"><span>异步推理 / 动作执行</span><span>2026</span></div>
-            <h3>XVLA / FlashVLA 异步执行</h3>
-            <p class="project-subtitle">让机械臂执行当前动作的同时生成下一段动作</p>
-            <p>围绕连续控制场景设计后台推理与动作消费流水线，减少机器人在 chunk 交界处的等待和运动停顿。</p>
+            <div class="project-meta"><span>推理部署 / 性能验证</span><span>03</span></div>
+            <h3>TensorRT 常驻服务部署</h3>
+            <p class="project-subtitle">从 PyTorch checkpoint 到可验证、可重复启动的真机推理服务</p>
+            <p>将策略推理拆分为 GPU Server 与 PiperX Client，围绕 TensorRT engine、运行契约和安全验收建立部署流程，模型只在服务端加载一次。</p>
+            <div class="deployment-flow" aria-label="TensorRT 部署流程">
+              <div><span>01</span><strong>Checkpoint</strong><small>合同检查</small></div>
+              <div><span>02</span><strong>Engine</strong><small>构建与数值验证</small></div>
+              <div><span>03</span><strong>Server</strong><small>常驻加载策略</small></div>
+              <div><span>04</span><strong>Client</strong><small>观测与动作发布</small></div>
+            </div>
             <ul class="project-points">
-              <li>实现后台 inference worker、有限 action queue 和最新动作发布器。</li>
-              <li>使用 chunk blending 改善新旧动作段之间的衔接。</li>
-              <li>记录队列水位、推理延迟和控制周期等运行指标。</li>
+              <li>覆盖 artifact、manifest、processor 和输入输出 shape 的启动前检查。</li>
+              <li>按 no-publish、短时发布、完整任务逐级验收，降低真机部署风险。</li>
+              <li>保留服务日志和客户端指标，便于分析延迟、动作队列和控制周期。</li>
             </ul>
             <div class="project-details">
-              <div><span>我的工作</span><strong>异步执行与运行监控</strong></div>
-              <div><span>当前状态</span><strong>工程实践</strong></div>
+              <div><span>我的工作</span><strong>TensorRT pipeline、Server/Client 与验收</strong></div>
+              <div><span>当前状态</span><strong>已形成部署操作链路</strong></div>
             </div>
-            <div class="tag-list"><span>Action Queue</span><span>Chunk Blending</span><span>Async Worker</span><span>Metrics</span></div>
+            <div class="tag-list"><span>TensorRT</span><span>Server / Client</span><span>IPC</span><span>Metrics</span><span>Safety</span></div>
+          </div>
+          <div class="video-column">
+            <div class="video-placeholder" role="img" aria-label="TensorRT 常驻服务部署演示视频待添加">
+              <span class="play-icon" aria-hidden="true">▶</span>
+              <strong>演示视频待添加</strong>
+              <code>videos/tensorrt-server-client/deployment.mp4</code>
+            </div>
+            <div class="video-caption"><span>DEPLOYMENT FLOW</span><span>VIDEO 03</span></div>
           </div>
         </article>
       </div>
 
       <div id="demos" class="project-group-heading demo-heading"><h3>真机任务 Demo</h3><span>压缩视频后放入对应目录</span></div>
       <div class="demo-grid">
-        <article class="demo-card"><div class="demo-video video-placeholder video-placeholder-light"><span class="play-icon" aria-hidden="true">▶</span><strong>视频待添加</strong><code>videos/demos/task-01.mp4</code></div><div class="demo-body"><span>DEMO 01</span><h3>任务名称待补充</h3><p>补充真实机器人任务名称与一句话说明。</p></div></article>
-        <article class="demo-card"><div class="demo-video video-placeholder"><span class="play-icon" aria-hidden="true">▶</span><strong>视频待添加</strong><code>videos/demos/task-02.mp4</code></div><div class="demo-body"><span>DEMO 02</span><h3>任务名称待补充</h3><p>补充真实机器人任务名称与一句话说明。</p></div></article>
-        <article class="demo-card"><div class="demo-video video-placeholder video-placeholder-light"><span class="play-icon" aria-hidden="true">▶</span><strong>视频待添加</strong><code>videos/demos/task-03.mp4</code></div><div class="demo-body"><span>DEMO 03</span><h3>任务名称待补充</h3><p>补充真实机器人任务名称与一句话说明。</p></div></article>
+        <article class="demo-card"><div class="demo-video video-placeholder video-placeholder-light"><span class="play-icon" aria-hidden="true">▶</span><strong>视频待添加</strong><code>videos/demos/task-01.mp4</code></div><div class="demo-body"><span>DEMO 01</span><h3>传送带抓取</h3><p>展示 PiperX 在连续任务中的观测、推理与动作执行。</p></div></article>
+        <article class="demo-card"><div class="demo-video video-placeholder"><span class="play-icon" aria-hidden="true">▶</span><strong>视频待添加</strong><code>videos/demos/task-02.mp4</code></div><div class="demo-body"><span>DEMO 02</span><h3>杯子抓取</h3><p>展示策略在双臂操作任务中的真机执行效果。</p></div></article>
+        <article class="demo-card"><div class="demo-video video-placeholder video-placeholder-light"><span class="play-icon" aria-hidden="true">▶</span><strong>视频待添加</strong><code>videos/demos/task-03.mp4</code></div><div class="demo-body"><span>DEMO 03</span><h3>多物体抓取</h3><p>展示不同任务指令与策略执行链路的切换。</p></div></article>
       </div>
     </section>
   </main>
