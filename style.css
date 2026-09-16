@@ -40,3 +40,13 @@
   .diagram-heading { font-size: 9px; }
   .footer-inner > span { margin-left: 0; }
 }
+
+.brand-title { font-size: 18px; font-weight: 600; letter-spacing: 0; white-space: nowrap; }
+.brand-divider { margin-inline: 8px; color: #a6b1bf; font-weight: 400; }
+@media (max-width: 600px) {
+  .header-inner { height: auto; min-height: 66px; flex-wrap: wrap; gap: 10px 17px; padding-block: 12px; }
+  .brand-title { font-size: 16px; }
+  .brand-divider { margin-inline: 5px; }
+  .site-nav { order: 3; width: 100%; justify-content: space-between; }
+  html { scroll-padding-top: 110px; }
+}
